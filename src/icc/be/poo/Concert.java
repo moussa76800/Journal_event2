@@ -3,7 +3,6 @@
  */
 package icc.be.poo;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 
 /**
@@ -22,8 +21,8 @@ public class Concert extends Evenement implements Manageable {
 	 * @param designation
 	 * @param artistes
 	 */
-	public Concert(String texte, LocalDate dateEvent, String designation) {
-		super(texte, dateEvent);
+	public Concert(String designation) {
+		super();
 		this.designation=designation;
 		this.artistes = new ArrayList<>();
 	}

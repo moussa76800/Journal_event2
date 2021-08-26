@@ -35,7 +35,7 @@ class TestConcert {
 		// Utilisation
 
 		LocalDate date = LocalDate.of(2021, 8, 21);
-		Concert concert = new Concert("festival de Paname", date, "rnb");
+		Concert concert = new Concert("rnb");
 		concert.getArtistes().add(artiste);
 		concert.getArtistes().add(artiste1);
 
@@ -65,7 +65,7 @@ class TestConcert {
 		// Utilisation
 
 		LocalDate date = LocalDate.of(2021, 8, 21);
-		Concert concert = new Concert("festival de Paname", date, "rnb");
+		Concert concert = new Concert("rnb");
 
 		concert.getArtistes().add(artiste);
 
@@ -92,7 +92,7 @@ class TestConcert {
 		// Utilisation
 
 		LocalDate date = LocalDate.of(2021, 8, 21);
-		Concert concert = new Concert("festival de Paname", date, "rnb");
+		Concert concert = new Concert("rnb");
 
 		concert.getArtistes().add(artiste);
 
@@ -113,7 +113,7 @@ class TestConcert {
 		// UTILISATION
 
 		LocalDate date = LocalDate.of(2021, 8, 21);
-		Concert concert = new Concert("festival de Paname", date, "rnb");
+		Concert concert = new Concert("rnb");
 		concert.getArtistes().add(artiste1);
 
 		assertThrows(DuplicateArtistException.class, () -> {
@@ -159,7 +159,7 @@ class TestConcert {
 
 		// UTILISATION
 		LocalDate date = LocalDate.of(2021, 8, 21);
-		Concert concert = new Concert("festival de Paname", date, "rnb");
+		Concert concert = new Concert("rnb");
 		concert.getArtistes().add(artiste1);
 		concert.getArtistes().add(artiste);
 

@@ -11,10 +11,8 @@ public class Evenement {
 	 * @param texte
 	 * @param dateEvent
 	 */
-	public Evenement(String texte, LocalDate dateEvent) {
+	public Evenement() {
 		super();
-		this.texte = texte;
-		this.dateEvent = dateEvent;
 	}
 
 	/**
