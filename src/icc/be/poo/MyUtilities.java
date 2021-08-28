@@ -26,10 +26,10 @@ public class MyUtilities {
 
 		// ConfigurationXStream
 
-		xstream.alias("concert", Concert.class);
-		xstream.alias("designation", Concert.class);
+		xstream.alias("Concert", Concert.class);
 		xstream.alias("Artiste",Artiste.class);
-        xstream.useAttributeFor("dateCreation",Artiste.class);
+		xstream.aliasAttribute("date", "dateCreation");
+        xstream.useAttributeFor(Artiste.class,"dateCreation");
         xstream.addImplicitCollection(Concert.class,"artistes");
         
         //convertir en String xml et sauve dans le fichier
@@ -47,11 +47,11 @@ public class MyUtilities {
     	public static Concert fromXml(String fileName) {
 
     		// Configuration XStream
-    		xstream.alias("concert", Concert.class);
-    		xstream.useAttributeFor(Concert.class, "designation");
-    		xstream.alias("Artiste", Artiste.class);
-    		xstream.useAttributeFor(Artiste.class, "dateCreation");
-    		xstream.addImplicitCollection(Concert.class, "artistes");
+    		xstream.alias("Concert", Concert.class);
+    		xstream.alias("Artiste",Artiste.class);
+    		xstream.aliasAttribute("date", "dateCreation");
+            xstream.useAttributeFor(Artiste.class,"dateCreation");
+            xstream.addImplicitCollection(Concert.class,"artistes");
     		// Récuperer l'objet
     		return (Concert) xstream.fromXML(new File(fileName));
     	}

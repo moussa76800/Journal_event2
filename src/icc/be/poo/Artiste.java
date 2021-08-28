@@ -4,6 +4,7 @@
 package icc.be.poo;
 
 import java.time.LocalDate;
+import java.util.Scanner;
 
 /**
  * @author Moussa
@@ -22,12 +23,24 @@ public class Artiste implements Comparable<Artiste> {
 	 */
 	public Artiste(String nomArtiste, boolean isVip) {
 		super();
+		
 		setNomArtiste(nomArtiste);
 		this.dateCreation = LocalDate.now();
 		this.isVip = isVip;
 	}
 
-	
+	/**
+	 * @param nomArtiste the nomArtiste to set
+	 */
+	public void setNomArtiste(String nomArtiste) {
+		Scanner sc = new Scanner(System.in);
+		while(nomArtiste.equals("")){
+			System.out.print("introduire a nouveau le nom : \n");
+			nomArtiste = sc.nextLine();
+			//throw new VideDesignationException("\n Error !!!\n Introduiser un nom correct !");
+		}
+		this.nomArtiste = nomArtiste;
+	}
 
 	/**
 	 * @return the nomArtiste
@@ -38,12 +51,7 @@ public class Artiste implements Comparable<Artiste> {
 
 
 
-	/**
-	 * @param nomArtiste the nomArtiste to set
-	 */
-	public void setNomArtiste(String nomArtiste) {
-		this.nomArtiste = nomArtiste;
-	}
+	
 
 
 

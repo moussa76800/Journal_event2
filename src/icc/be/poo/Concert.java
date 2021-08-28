@@ -3,7 +3,6 @@
  */
 package icc.be.poo;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 
 /**
@@ -22,10 +21,37 @@ public class Concert extends Evenement implements Manageable {
 	 * @param designation
 	 * @param artistes
 	 */
-	public Concert(String texte, LocalDate dateEvent, String designation) {
-		super(texte, dateEvent);
-		this.designation=designation;
+	public Concert(String designation) {
+		super();
+		// donc ici je vais utilisé la methode setteur 
+		setDesignation(designation);
 		this.artistes = new ArrayList<>();
+	}
+	
+	
+	public void setDesignation(String designation) {
+		// si designation n'est pas égal a Hello , 
+		// alors leve moi l'exception
+		if(designation.equals("Hello")) {
+			throw new VideDesignationException("\nVous avez introduit Hello dans la designation,\n Veuillez introduire une autre désignation");
+		}else {
+			this.designation = designation;
+		}
+		
+	}
+
+
+
+
+
+
+
+	/**
+	 * @param artistes the artistes to set
+	 */
+	public void setArtistes(ArrayList<Artiste> artistes) {
+		
+		this.artistes = artistes;
 	}
 
 	/**
@@ -42,13 +68,7 @@ public class Concert extends Evenement implements Manageable {
 		return artistes;
 	}
 
-	/**
-	 * @param artistes the artistes to set
-	 */
-	public void setArtistes(ArrayList<Artiste> artistes) {
-		
-		this.artistes = artistes;
-	}
+	
 
 	@Override
 	public boolean dropArtiste(Artiste a) {
@@ -89,6 +109,7 @@ public class Concert extends Evenement implements Manageable {
 
 	@Override
 	public String toString() {
-		return "Concert [designation=" + designation + ", artistes=" + artistes + "]";
+		return "Concert \n[designation=" + designation 
+				+ ",\nartistes=" + artistes + "]\n ------------------------------- \n";
 	}
 }

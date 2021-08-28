@@ -1,25 +1,23 @@
-<designation>
-  <texte>Festival</texte>
-  <dateEvent>2021-08-21</dateEvent>
+<Concert>
   <designation>Rap</designation>
-  <Artiste>
+  <Artiste date="2021-08-25">
     <nomArtiste>Enjoy</nomArtiste>
-    <dateCreation>2021-08-23</dateCreation>
     <isVip>false</isVip>
   </Artiste>
-  <Artiste>
+  <Artiste date="2021-08-25">
     <nomArtiste>mouMOU</nomArtiste>
-    <dateCreation>2021-08-23</dateCreation>
     <isVip>true</isVip>
   </Artiste>
-  <Artiste>
+  <Artiste date="2021-08-25">
     <nomArtiste>moi</nomArtiste>
-    <dateCreation>2021-08-23</dateCreation>
     <isVip>false</isVip>
   </Artiste>
-  <Artiste>
+  <Artiste date="2021-08-25">
     <nomArtiste>bingovip</nomArtiste>
-    <dateCreation>2021-08-23</dateCreation>
     <isVip>true</isVip>
   </Artiste>
-</designation>
+  <Artiste date="2021-08-25">
+    <nomArtiste>bin</nomArtiste>
+    <isVip>true</isVip>
+  </Artiste>
+</Concert>

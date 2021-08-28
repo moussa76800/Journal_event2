@@ -1,20 +1,35 @@
 package icc.be.poo;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class Evenement {
 
 	private String texte;
 	private LocalDate dateEvent;
+	/*
+	 * J'ai crée une List de concert
+	 */
+	private ArrayList<Concert> concert;
 
 	/**
 	 * @param texte
 	 * @param dateEvent
 	 */
-	public Evenement(String texte, LocalDate dateEvent) {
+	public Evenement() {
 		super();
-		this.texte = texte;
-		this.dateEvent = dateEvent;
+		/*
+		 * j'ai instancier la list dans le constructeur
+		 */
+		this.concert = new ArrayList<>();
+	}
+
+	public ArrayList<Concert> getConcert() {
+		return concert;
+	}
+
+	public void setConcert(ArrayList<Concert> concert) {
+		this.concert = concert;
 	}
 
 	/**
@@ -44,10 +59,26 @@ public class Evenement {
 	public void setDateEvent(LocalDate dateEvent) {
 		this.dateEvent = dateEvent;
 	}
-
+	
+	
+	/*
+	 * j'ai cree une methode pour ajouter un concert.
+	 * j'ai pas fait de methode pour supprime un concert
+	 */
+	public boolean addConcert(Concert conCert) {
+		boolean result = false;
+		if(this.concert.contains(conCert)) {
+			throw new DuplicateConcertException("le Concert existe deja");
+		}else {
+			this.concert.add(conCert);
+			result = true; 
+		}
+		return result;
+	}
+	
 	@Override
 	public String toString() {
-		return "Evenement [texte=" + texte + ", dateEvent=" + dateEvent + "]";
+		return "Evenement \n[" + concert + "]";
 	}
 
 }
