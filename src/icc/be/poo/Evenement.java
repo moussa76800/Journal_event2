@@ -71,13 +71,14 @@ public class Evenement {
 			throw new DuplicateConcertException("le Concert existe deja");
 		}else {
 			this.concert.add(conCert);
+			result = true; 
 		}
 		return result;
 	}
 	
 	@Override
 	public String toString() {
-		return "Evenement [texte=" + texte + ", dateEvent=" + dateEvent + "]";
+		return "Evenement \n[" + concert + "]";
 	}
 
 }

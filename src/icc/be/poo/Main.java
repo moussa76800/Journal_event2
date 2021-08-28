@@ -5,24 +5,19 @@ import java.util.ArrayList;
 public class Main {
 
 	public static void main(String[] args) {
-		// je cree un evenement 
-		Evenement even = new Evenement();
-		// je cree des concert
-		Concert concert = new Concert ("Rap");
-		Concert conct = new Concert ("rnb");
-		Concert conce = new Concert ("pop");
-		// je cree un liste de concert
-		ArrayList<Concert> list = new ArrayList<>();
-		// j'ajoute les concerts dans la liste
-		list.add(concert);
-		list.add(conct);
-		list.add(conce);
-		// j'ajoute la liste des concerts dans mon evenement
-		even.setConcert(list);
-		// j'ajoute " concert " avec la methode "addConcert()" qui se trouve
-		// dans la classe evenement.
-		even.addConcert(concert); 
 		
+		// test du nom artiste vide
+		Artiste philipé = new Artiste("",false);
+		System.out.println(philipé);
+		
+		
+//		// je cree un evenement 
+//		Evenement even = new Evenement();
+//		
+//		
+//		// voila ici m'a désignation est egal a RAP 
+//		// je vais lancer pour voir 
+//		Concert concert = new Concert ("Hello");
 		
 		
 //		Artiste artiste = new Artiste("Enjoy", false);
